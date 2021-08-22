@@ -7,6 +7,7 @@ Use App\Http\Controllers\CjCompensationController;
 Use App\Http\Controllers\EpsController;
 Use App\Http\Controllers\ChargesControlle;
 Use App\Http\Controllers\ArlsController;
+Use App\Http\Controllers\OfficialController;
 
 /*
 |--------------------------------------------------------------------------
