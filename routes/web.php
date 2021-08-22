@@ -70,3 +70,11 @@ Route::get('/api/auxilio/getData', [ArlsController::class, 'getData']);
 Route::post('/api/auxilio/store', [ArlsController::class, 'store']);
 Route::put('/api/auxilio/update', [ArlsController::class, 'update']);
 Route::delete('/api/auxilio/delete', [ArlsController::class, 'destroy']);
+
+//Ruta official
+
+Route::get('/api/offi/index', [OfficialController::class, 'index']);
+Route::get('/api/offi/getData', [OfficialController::class, 'getData']);
+Route::post('/api/offi/store', [OfficialController::class, 'store']);
+Route::put('/api/offi/update', [OfficialController::class, 'update']);
+Route::delete('/api/offi/delete', [OfficialController::class, 'destroy']);
