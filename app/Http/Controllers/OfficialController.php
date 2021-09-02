@@ -26,7 +26,7 @@ class OfficialController extends Controller
         }
 
         
-        return ['offi'=>$cjcompen];
+        return ['offi'=>$offi];
     }
 
     public function store(Request $request)

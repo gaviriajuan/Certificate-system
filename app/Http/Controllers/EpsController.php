@@ -12,7 +12,7 @@ class EpsController extends Controller
     {
         $salud = eps::get();
 
-        return ['salud'=>$tcerti];
+        return ['salud'=>$salud];
     }
     public function getData(Request $request)
     {
@@ -25,7 +25,7 @@ class EpsController extends Controller
         }
 
         
-        return ['salud'=>$tcerti];
+        return ['salud'=>$salud];
     }
     public function store(Request $request)
     {

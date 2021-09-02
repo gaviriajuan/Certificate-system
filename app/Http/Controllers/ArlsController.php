@@ -12,7 +12,7 @@ class ArlsController extends Controller
     {
         $auxilio = Arls::get();
 
-        return ['auxilio'=>$tcerti];
+        return ['auxilio'=>$auxilio];
     }
     public function getData(Request $request)
     {
@@ -25,7 +25,7 @@ class ArlsController extends Controller
         }
 
         
-        return ['auxilio'=>$tcerti];
+        return ['auxilio'=>$auxilio];
     }
     public function store(Request $request)
     {

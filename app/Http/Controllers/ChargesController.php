@@ -12,7 +12,7 @@ class ChargesController extends Controller
     {
         $cargo = Charges::get();
 
-        return ['cargo'=>$tcerti];
+        return ['cargo'=>$cargo];
     }
     public function getData(Request $request)
     {
@@ -25,7 +25,7 @@ class ChargesController extends Controller
         }
 
         
-        return ['cargo'=>$tcerti];
+        return ['cargo'=>$cargo];
     }
     public function store(Request $request)
     {

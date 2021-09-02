@@ -8,7 +8,7 @@ use App\Models\record_detail;
 class RecordDetailController extends Controller
 {
     //
-    public function index(Request $request)
+    public function getDetail(Request $request)
     {
         $detail = record_detail::get();
 
@@ -31,9 +31,7 @@ class RecordDetailController extends Controller
     {
         $detail = new record_detail;
 
-        $detail->name = $request->name;
-
-        $detail->save();
+        
     }
     public function update(Request $request)
     {
