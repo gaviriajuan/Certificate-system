@@ -32,32 +32,11 @@ class TypesCertificatesController extends Controller
     }
     public function store(Request $request)
     {
-        try{
-            DB::beginTransaction();
-            
+        $tcerti = new Types_Certificates;
 
-            $tcerti = new Types_Certificates;
-            
-            $tcerti->name=$request->name;
-              
-            $tcerti->save();
+        $tcerti->name = $request->name;
 
-             $detalles= $request->data;
-            foreach($detalles as $ep=>$det){
-                $recordDet= new Types_Certificates();
-
-                $recordDet->id_official= $detail->id;
-                $recordDet->id_types_certificate=$det['id'];
-                $recordDet->fec_generation=$det['fec_generation'];
-
-                $recordDet->save();
-             }
-       
-            DB::commit();
-
-        }catch(Exception $e){
-            DB::rollback();
-        }
+        $tcerti->save();
     }
     public function update(Request $request)
     {
