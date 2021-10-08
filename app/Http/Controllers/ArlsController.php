@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Arls;
+use Inertia\Inertia;
 
 class ArlsController extends Controller
 {
@@ -12,7 +13,8 @@ class ArlsController extends Controller
     {
         $auxilio = Arls::get();
 
-        return ['auxilio'=>$auxilio];
+        //return ['auxilio'=>$auxilio];
+        return Inertia::render('ARL',['auxilio'=>$auxilio]);
     }
     public function getData(Request $request)
     {

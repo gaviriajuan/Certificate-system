@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Official;
+use App\Models\official;
+use Inertia\Inertia;
 
 class OfficialController extends Controller
 {
     //
     public function index(Request $request)
     {
-        $offi = Official::get();
+        $offi = official::get();
 
-        return ['offi'=>$offi];
+        //return ['offi'=>$offi];
+         return Inertia::render('Oficial',['offi'=>$offi]);
     }
 
     public function getData(Request $request)

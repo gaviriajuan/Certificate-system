@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\cj_compensation;
+use Inertia\Inertia;
 
 class CjCompensationController extends Controller
 {
@@ -12,7 +13,8 @@ class CjCompensationController extends Controller
     {
         $cjcompen = cj_compensation::get();
 
-        return ['cjcompen'=>$cjcompen];
+        //return ['cjcompen'=>$cjcompen];
+        return Inertia::render('CajaCompensacion',['cjcompen'=>$cjcompen]);
     }
     public function getData(Request $request)
     {

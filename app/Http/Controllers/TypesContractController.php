@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Types_Contract;
+use Inertia\Inertia;
 
 class TypesContractController extends Controller
 {
@@ -12,7 +13,8 @@ class TypesContractController extends Controller
     {
         $tcontract = Types_Contract::get();
 
-        return ['tcontract'=>$tcontract];
+       // return ['tcontract'=>$tcontract];
+        return Inertia::render('TiposContrato',['tcontract'=>$tcontract]);
     }
     public function getData(Request $request)
     {

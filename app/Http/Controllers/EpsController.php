@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\eps;
+use Inertia\Inertia;
 
 class EpsController extends Controller
 {
@@ -12,7 +13,8 @@ class EpsController extends Controller
     {
         $salud = eps::get();
 
-        return ['salud'=>$salud];
+        //return ['salud'=>$salud];
+        return Inertia::render('EPS',['salud'=>$salud]);
     }
     public function getData(Request $request)
     {
